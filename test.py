@@ -42,18 +42,22 @@ test_loader = DataLoader(testset, batch_size=batch_size, shuffle=False,
 
 ## load, create different models
 if model_depth == 3:
-    from model_3conv import MNIST_CNN_Net, MNIST_RotDCF_Net
+    from model_3conv import MNIST_CNN_Net, MNIST_RotDCF_Net, MNIST_DCF_Net
 else:
-    from model_6conv import MNIST_CNN_Net, MNIST_RotDCF_Net
+    from model_6conv import MNIST_CNN_Net, MNIST_RotDCF_Net, MNIST_DCF_Net
 
 if model_type == 'RotDCF':
     model = MNIST_RotDCF_Net(M=M, Ntheta=Ntheta, K=K, K_a=K_a)
     path_ckpt = 'checkpoints/{}layers/{}_M{}_Ntheta{}_K{}_Ka{}.pth'.\
                         format(model_depth, model_type, M, Ntheta, K, K_a)
-else:
+elif model_type == 'CNN':
     M = 32
     model = MNIST_CNN_Net(M=M)
     path_ckpt = 'checkpoints/{}layers/{}_M{}.pth'.format(model_depth, model_type, M)
+else:
+    M=32
+    model = MNIST_DCF_Net(M=M, K=K)
+    path_ckpt = 'checkpoints/{}layers/{}_M{}_K{}.pth'.format(model_depth, model_type)
 
 model.cuda()
 model = nn.DataParallel(model)

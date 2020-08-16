@@ -5,7 +5,9 @@ This repo implements the **rotMNIST** experiment in Section 4.1(ref. Table 3 and
 
 ## Requirements
 pytorch>=1.0
+
 numpy>=1.18
+
 matplotlib
 
 ## Dataset
@@ -26,9 +28,14 @@ Change *data_path* and *save_path* variables in dataset.py.
 ./test.sh CNN 3
 ```
 ### Test 6-layer RotDCF(M=16, $N_theta=8$, K=5, $K_\alpha$=5)
-change *M, $N_\theta$, K, and $K_\alpha$* in test.sh, and then,
+change *M=16, $N_\theta$=8, K=5, and $K_\alpha$=5* in test.sh, and then,
 ```python
 ./test.sh RotDCF 6 
+```
+### Test 3-layer DCF(M=32, K=5)
+change *K=5* in test.sh, and then,
+```python
+./test.sh DCF 3 
 ```
 
 ## Train New Models
@@ -37,7 +44,13 @@ change *M, $N_\theta$, K, and $K_\alpha$* in test.sh, and then,
 ./train.sh CNN 3
 ```
 ### Train 6-layer RotDCF(M=16, $N_theta=8$, K=5, $K_\alpha$=5)
-change *M, $N_\theta$, K, and $K_\alpha$* in train.sh, and then,
+change *M=16, $N_\theta$=8, K=5, and $K_\alpha$=5* in train.sh, and then,
 ```python
 ./train.sh RotDCF 6 
+```
+
+### Test 6-layer DCF(M=32, K=5)
+change *K=5* in train.sh, and then,
+```python
+./train.sh DCF 6 
 ```
