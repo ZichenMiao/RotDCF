@@ -19,7 +19,7 @@ Change *data_path* and *save_path* variables in dataset.py.
 ## Notebook for Rotation Equivariance
 'Demo for Rotataion Equivariance' shows the main property of proposed method. Go through the notebook and you will observe rotation equivariance in output feature maps, e.g.,
 <center class="half">
-    <img src=./misc/featmap_rotequi_layer1.png width=600>
+    <img src=./misc/featmap_rotequi_layer1.png width=700>
 </center>
 
 ## Test Pretrained Models
@@ -27,7 +27,7 @@ Change *data_path* and *save_path* variables in dataset.py.
 ```python
 ./test.sh CNN 3
 ```
-### Test 6-layer RotDCF(M=16, $N_theta=8$, K=5, $K_\alpha$=5)
+### Test 6-layer RotDCF(M=16, http://latex.codecogs.com/gif.latex?\N_\theta=8, K=5, $K_\alpha$=5)
 change *M=16, $N_\theta$=8, K=5, and $K_\alpha$=5* in test.sh, and then,
 ```python
 ./test.sh RotDCF 6 
@@ -43,7 +43,7 @@ change *K=5* in test.sh, and then,
 ```python
 ./train.sh CNN 3
 ```
-### Train 6-layer RotDCF(M=16, $N_theta=8$, K=5, $K_\alpha$=5)
+### Train 6-layer RotDCF(M=16, $N_\theta=8$, K=5, $K_\alpha$=5)
 change *M=16, $N_\theta$=8, K=5, and $K_\alpha$=5* in train.sh, and then,
 ```python
 ./train.sh RotDCF 6 
@@ -54,3 +54,5 @@ change *K=5* in train.sh, and then,
 ```python
 ./train.sh DCF 6 
 ```
+
+<!-- ![](http://latex.codecogs.com/gif.latex?\\frac{1}{1+sin(x)}) -->
