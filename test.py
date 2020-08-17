@@ -57,7 +57,7 @@ elif model_type == 'CNN':
 else:
     M=32
     model = MNIST_DCF_Net(M=M, K=K)
-    path_ckpt = 'checkpoints/{}layers/{}_M{}_K{}.pth'.format(model_depth, model_type)
+    path_ckpt = 'checkpoints/{}layers/{}_M{}_K{}.pth'.format(model_depth, model_type, M, K)
 
 model.cuda()
 model = nn.DataParallel(model)

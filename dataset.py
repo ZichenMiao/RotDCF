@@ -6,8 +6,8 @@ from torchvision.datasets import MNIST
 from torchvision import transforms
 import PIL
 
-data_path = '/home/zichen/Projects/RotDCF-Pytorch/data/MNIST/processed/'
-save_path = '/home/zichen/Projects/RotDCF-Pytorch/data/MNIST/rotate'
+data_path = '/home/zichen/Projects/data/MNIST/processed/'
+save_path = '/home/zichen/Projects/data/MNIST/rotate'
 
 TOTAL_LENGTH = 70000
 def rotate_MNIST_permute(model_depth):

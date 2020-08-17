@@ -77,6 +77,8 @@ class MNIST_CNN_Net(nn.Module):
 class MNIST_DCF_Net(nn.Module):
     def __init__(self, M=32, K=5):
         super(MNIST_DCF_Net, self).__init__()
+        self.K = K
+
         self.conv_layers = nn.Sequential(
             Conv_Module('dcf_conv', feat_in=1, feat_out=M),
             Conv_Module('dcf_conv', feat_in=M, feat_out=int(1.5*M)),
