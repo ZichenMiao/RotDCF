@@ -1,6 +1,6 @@
 python test.py \
---model_type RotDCF \
---model_depth 6 \
+--model_type $1 \
+--model_depth $2 \
 --num_feat 16 \
 --Ntheta 8 \
 --K 5 \

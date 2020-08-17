@@ -23,33 +23,33 @@ Change *data_path* and *save_path* variables in dataset.py.
 </center>
 
 ## Test Pretrained Models
-### Test 3-layer CNN(M=32)
+### Test 6-layer CNN(M=32)
 ```python
-./test.sh CNN 3
+./test.sh CNN 6
 ```
 ### Test 6-layer RotDCF(M=16, ![](http://latex.codecogs.com/gif.latex?N_{\theta})=8, K=5, ![](http://latex.codecogs.com/gif.latex?K_{\alpha})=5)
 change *M=16, ![](http://latex.codecogs.com/gif.latex?N_{\theta})=8, K=5, and ![](http://latex.codecogs.com/gif.latex?K_{\alpha})=5* in test.sh, and then,
 ```python
 ./test.sh RotDCF 6 
 ```
-### Test 3-layer DCF(M=32, K=5)
+### Test 6-layer DCF(M=32, K=5)
 change *K=5* in test.sh, and then,
 ```python
-./test.sh DCF 3 
+./test.sh DCF 6 
 ```
 
 ## Train New Models
-### Train 3-layer CNN(M=32)
+### Train 6-layer CNN(M=32) [Acc=96.71%]
 ```python
-./train.sh CNN 3
+./train.sh CNN 6
 ```
-### Train 6-layer RotDCF(M=16, ![](http://latex.codecogs.com/gif.latex?N_{\theta})=8$, K=5, ![](http://latex.codecogs.com/gif.latex?K_{\alpha})=5)
+### Train 6-layer RotDCF(M=16, ![](http://latex.codecogs.com/gif.latex?N_{\theta})=8$, K=5, ![](http://latex.codecogs.com/gif.latex?K_{\alpha})=5) [Acc=98.85%]
 change *M=16, ![](http://latex.codecogs.com/gif.latex?N_{\theta})=8, K=5, and ![](http://latex.codecogs.com/gif.latex?K_{\alpha})=5* in train.sh, and then,
 ```python
 ./train.sh RotDCF 6 
 ```
 
-### Test 6-layer DCF(M=32, K=5)
+### Test 6-layer DCF(M=32, K=5) [Acc=96.80%]
 change *K=5* in train.sh, and then,
 ```python
 ./train.sh DCF 6 

@@ -82,8 +82,8 @@ class MNIST_DCF_Net(nn.Module):
         self.fc2 = nn.Linear(64, 10)
         self.dropout = nn.Dropout(0.5)
 
-        print('\nCreate CNN Net with num_features {}, Total Params: {}k'.\
-                format(M, num_params/1000)) 
+        print('\nCreate DCF Net with num_features {}, K {}, Total Params: {}k'.\
+                format(M, self.K, num_params/1000)) 
 
         print(self)
 
